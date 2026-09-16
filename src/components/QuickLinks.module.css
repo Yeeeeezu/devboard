@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 680px;
+}
+
+.group {}
+
+.groupLabel {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chip:hover {
+  border-color: var(--muted);
+}
+
+.chipLink {
+  padding: 6px 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.chipLink:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.remove {
+  background: none;
+  border: none;
+  border-left: 1px solid var(--border);
+  color: var(--dim);
+  cursor: pointer;
+  padding: 6px 9px;
+  font-size: 14px;
+  line-height: 1;
+  transition: color 0.1s;
+}
+
+.remove:hover {
+  color: var(--red);
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 7px 12px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.btnPrimary {
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btnPrimary:hover { opacity: 0.85; }
+
+.btnSecondary {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+
+.btnSecondary:hover {
+  color: var(--text);
+  border-color: var(--muted);
+}
+
+.btnAdd {
+  background: none;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.15s;
+}
+
+.btnAdd:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(124, 106, 247, 0.05);
+}
