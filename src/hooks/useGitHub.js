@@ -10,6 +10,16 @@ async function fetchGH(path) {
   const res = await fetch(`https://api.github.com${path}`, {
     headers: { Accept: 'application/vnd.github+json' },
   })
+
+  if (res.status === 403 || res.status === 429) {
+    const reset = res.headers.get('x-ratelimit-reset')
+    const remaining = res.headers.get('x-ratelimit-remaining')
+    if (remaining === '0' && reset) {
+      const resetDate = new Date(Number(reset) * 1000).toLocaleTimeString()
+      throw new Error(`rate limited — resets at ${resetDate}`)
+    }
+  }
+
   if (!res.ok) throw new Error(`GitHub API ${res.status}: ${path}`)
   const data = await res.json()
   CACHE.set(path, { data, ts: Date.now() })
