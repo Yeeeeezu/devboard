@@ -1,0 +1,102 @@
+.count {
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  background: rgba(124, 106, 247, 0.04);
+  text-decoration: none;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.stars {
+  font-size: 12px;
+  color: var(--yellow);
+  font-family: var(--mono);
+}
+
+.desc {
+  font-size: 13px;
+  color: var(--dim);
+  flex: 1;
+  line-height: 1.4;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--dim);
+  font-family: var(--mono);
+}
+
+.langDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.updated {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--mono);
+  color: #444;
+}
+
+.state {
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 40px 0;
+}
+
+.stateErr {
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 40px 0;
+}
